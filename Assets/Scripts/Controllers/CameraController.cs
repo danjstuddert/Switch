@@ -9,6 +9,9 @@ public class CameraController : Singleton<CameraController> {
 	public float verticalSmoothTime;
 	public float minimumYPosition;
 
+	[Header("Horizontal Movement")]
+	public float horizontalOffset;
+
 	FocusArea focusArea;
 
 	float smoothVelocityY;
@@ -28,7 +31,7 @@ public class CameraController : Singleton<CameraController> {
 		if (isUpdating) {
 			focusArea.Update(target.bounds);
 
-			Vector2 focusPos = focusArea.center + Vector2.up * verticalOffset;
+			Vector2 focusPos = focusArea.center + Vector2.up * verticalOffset + Vector2.right * horizontalOffset;
 
 			focusPos.y = Mathf.SmoothDamp(transform.position.y, focusPos.y, ref smoothVelocityY, verticalSmoothTime);
 
