@@ -2722,11 +2722,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b116ef31907f94ab33d53c8b689854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusAreaSize: {x: 5, y: 7}
+  focusAreaSize: {x: 7, y: 7}
   verticalOffset: -1
   verticalSmoothTime: 0.2
   minimumYPosition: -0.04
-  horizontalOffset: 5
+  horizontalOffset: 6
 --- !u!1 &1541379533
 GameObject:
   m_ObjectHideFlags: 0
